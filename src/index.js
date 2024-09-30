@@ -1,4 +1,4 @@
-import { menuArray } from "src/data.js"
+import { menuArray } from "data.js"
 import { v4 as uuid } from "https://jspm.dev/uuid"
 
 const menuContainerEl = document.getElementById("menu-container")

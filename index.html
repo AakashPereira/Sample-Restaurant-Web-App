@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Menu - Jimmy's Dinner</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Smythe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="src/index.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+    </head>
+    <body>
+        <div class="outer-container">
+            <header>
+                <h1 class="title">Jimmy's Dinner</h1>
+                <p class="description">The best burgers and pizzas in town.</p>
+            </header>
+            <main id="main-el">
+                <div class="container">
+                    <div class="menu-container" id="menu-container">
+                    </div>
+                    
+                    <div id="summary-container">
+                        <div id="order-container"></div>
+                        <div id="order-total-container">
+                            <hr>
+                            <div class="total-price-container">
+                                <h3>Total Price</h3>
+                                <div class="order-item-price" id="order-total">$</div>
+                            </div>
+                        </div>
+                        <button class="btn" id="order-btn">Complete order</button>
+                    </div>
+                </div>
+            </main>
+            <div class="toast-notification" role="alert" id="toast-el"></div>
+            <div id="payment-modal" class="modal">
+                <div class="modal-header">
+                    <h2 tabindex="-1" id="payment-modal-heading">Payment Details</h2>
+                    <button id="close-modal-btn">X</button>
+                </div>
+                <p class="m-t-0">* indicates required fields</p>
+                <form id="payment-form">
+                    <div class="form-field">
+                        <label for="user-name">Name *</label>
+                        <input type="text" id="user-name" name="user-name" placeholder="Lewis Hamilton" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="card-number">Card Number *</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="4444 1278 7659 4343" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="cvv">CVV *</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="443" required>
+                    </div>
+                    <div id="status-msg" role="status"></div>
+                    <button type="submit" class="btn">Pay</button>
+                </form>
+            </div>
+        </div>
+	    <script src="src/index.js" type="module"></script>
+        <script src="src/payment.js"></script>
+    </body>
+</html>
+
